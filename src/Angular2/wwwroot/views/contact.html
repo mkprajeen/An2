@@ -1,0 +1,38 @@
+﻿<div>
+    <div style="width:40%">
+        <h2>Contacts</h2>
+        <!--<label>Name:</label>
+        <input type="text" value="{{name}}">-->
+        <!--<input type="text"  placeholder="Please enter name" class="form-control">-->
+        <label>Name1:</label>
+        <input type="text" [(ngModel)]="name" placeholder="Please enter name" required class="form-control">
+
+        <h1>{{title}}</h1>
+        <h2>My favorite hero is: {{myHero.name}}</h2>
+        <p>Heroes:</p>
+        <ul>
+            <li *ngFor="let hero of heroes">
+                {{ hero.name }}
+            </li>
+        </ul>
+        <p *ngIf="heroes.length > 5">There are many heroes!</p>
+        <input #newHero
+               (keyup.enter)="addHero(newHero.value)"
+               (blur)="addHero(newHero.value); newHero.value='' ">
+
+        <button (click)=addHero(newHero.value)>Add</button>
+
+        <!--<button (click)="onClickMe()">Click Me!</button>
+        <input (keyup)="onKey($event)">-->
+        <!--Template reference variable exampe #box-->
+        <!--<input #box (keyup.enter)="values=box.value"  (blur)="values=box.value">
+        <p>{{box.value}}</p>-->       
+    </div>
+    
+</div>
+<div>
+    <hero-form>loading...</hero-form>
+</div>
+<div>
+    <task>loading...</task>
+</div>
