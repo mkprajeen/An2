@@ -9,20 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-const task_service_1 = require('./task.service');
-let TaskComponent = class TaskComponent {
-    constructor(tasks) {
-        this.heroes = tasks.getTasks();
+//import {TASKS} from './mock-tasks';
+const hero_1 = require('./hero');
+let TaskService = class TaskService {
+    getTasks() {
+        return [
+            new hero_1.Hero(1, 'Windstorm', 'test1'),
+            new hero_1.Hero(13, 'Bombasto', 'test1'),
+            new hero_1.Hero(15, 'Magneta', 'test1'),
+            new hero_1.Hero(20, 'Tornado', 'test1')
+        ];
+        //return TASKS;
     }
 };
-TaskComponent = __decorate([
-    core_1.Component({
-        selector: 'task',
-        providers: [task_service_1.TaskService],
-        //template: '<h4>My Tasks</h4>'
-        templateUrl: './views/taskview.html'
-    }), 
-    __metadata('design:paramtypes', [task_service_1.TaskService])
-], TaskComponent);
-exports.TaskComponent = TaskComponent;
-//# sourceMappingURL=task.component.js.map
+TaskService = __decorate([
+    core_1.Injectable(), 
+    __metadata('design:paramtypes', [])
+], TaskService);
+exports.TaskService = TaskService;
+//# sourceMappingURL=task.service.js.map

@@ -1,8 +1,8 @@
 ﻿<div>
     <h2>Tasks</h2>
     <ul>
-        <li>Task1</li>
-        <li>Task2</li>
-        <li>Task3</li>
+        <li *ngFor="let hero of heroes">
+            {{ hero.name }}
+        </li>
     </ul>
 </div>
