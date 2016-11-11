@@ -9,25 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-const hero_1 = require('./hero');
-const logger_service_1 = require('./logger.service');
-let TaskService = class TaskService {
-    constructor(logger) {
-        this.logger = logger;
+let Logger = class Logger {
+    constructor() {
+        this.logs = [];
     }
-    getTasks() {
-        this.logger.log('Service Call Getting Tasks  ...');
-        return [
-            new hero_1.Hero(1, 'Windstorm', 'test1'),
-            new hero_1.Hero(13, 'Bombasto', 'test1'),
-            new hero_1.Hero(15, 'Magneta', 'test1'),
-            new hero_1.Hero(20, 'Tornado', 'test1')
-        ];
+    log(message) {
+        this.logs.push(message);
+        console.log(message);
     }
 };
-TaskService = __decorate([
+Logger = __decorate([
     core_1.Injectable(), 
-    __metadata('design:paramtypes', [logger_service_1.Logger])
-], TaskService);
-exports.TaskService = TaskService;
-//# sourceMappingURL=task.service.js.map
+    __metadata('design:paramtypes', [])
+], Logger);
+exports.Logger = Logger;
+//# sourceMappingURL=logger.service.js.map

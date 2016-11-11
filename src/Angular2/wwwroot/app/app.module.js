@@ -14,12 +14,14 @@ const forms_1 = require('@angular/forms');
 const app_component_1 = require('./app.component');
 const task_component_1 = require('./task.component');
 const hero_form_component_1 = require('./hero-form.component');
+const logger_service_1 = require('./logger.service');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
         declarations: [app_component_1.AppComponent, task_component_1.TaskComponent, hero_form_component_1.HeroFormComponent],
+        providers: [logger_service_1.Logger],
         bootstrap: [app_component_1.AppComponent]
     }), 
     __metadata('design:paramtypes', [])
