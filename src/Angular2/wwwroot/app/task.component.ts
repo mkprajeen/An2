@@ -2,6 +2,11 @@
 import {TaskService} from './task.service';
 import {Hero} from './hero';
 
+import {HERO_DI_CONFIG} from  './app.config';
+import {APP_CONFIG} from  './app.config';
+import { Inject } from '@angular/core';
+import {AppConfig} from  './app.config';
+
 
 @Component({
     selector: 'task',
@@ -11,15 +16,13 @@ import {Hero} from './hero';
 })
 export class TaskComponent {
     heroes: Hero[];
-    constructor(tasks: TaskService)
+    appname: string;
+    constructor(tasks: TaskService, @Inject(APP_CONFIG) config:AppConfig)
     {
         this.heroes = tasks.getTasks();
+        this.appname = config.title;
     
     }
-    //constructor()
-    //{
-    //    this.heroes = new TaskService().getTasks();
-    //}
-
+   
     
 }

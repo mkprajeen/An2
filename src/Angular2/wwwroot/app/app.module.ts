@@ -7,13 +7,15 @@ import { TaskComponent }   from './task.component';
 import { HeroFormComponent} from './hero-form.component'
 import {Logger} from './logger.service'
 
-import {TaskService} from './task.service';
+import {OpaqueToken} from '@angular/core';
+import {HERO_DI_CONFIG} from  './app.config';
+import {APP_CONFIG} from  './app.config';
 
 
 @NgModule({
     imports: [BrowserModule, FormsModule],
     declarations: [AppComponent, TaskComponent, HeroFormComponent],
-    providers: [Logger], //application wide services
+    providers: [Logger, { provide: APP_CONFIG, useValue: HERO_DI_CONFIG }], //application wide services
     bootstrap: [AppComponent]
 })
 export class AppModule { }
