@@ -7,7 +7,7 @@ export interface AppConfig
 
 export const HERO_DI_CONFIG: AppConfig = {
     apiEndpoint: 'api.heroes.com',
-    title: 'Angular2Soul. Dependency Injection'
+    title: 'Angular2Sol-> Dependency Injection'
 };
 
 export let APP_CONFIG = new OpaqueToken('app.config');

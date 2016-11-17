@@ -1,0 +1,16 @@
+﻿<form >
+    <!--{{diagnostic}}-->      
+    <div class="form-group" >
+        <label for="cid">{{model.label}}</label>
+        <input type="text" class="form-control" id="cid" 
+               [required]="model.mandatory"
+               [(ngModel)]="model.inputvalue"
+               [placeholder]="model.placeholder"
+               [maxlength]="model.maxlength"               
+               name="cid" #ctrlModelId="ngModel">
+        <div [hidden]="ctrlModelId.valid || ctrlModelId.pristine"
+             class="alert alert-danger">
+            {{model.requiredmessage}}
+        </div>        
+    </div>    
+</form>
