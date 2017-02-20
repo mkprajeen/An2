@@ -9,7 +9,7 @@ import {TextBox} from './textboxvm';
 })
 export class TextBoxComponent {
     
-    model = new TextBox(18,'text', 'gdfg','Name','Ente name','##',true,'Name is required',10); 
+    model = new TextBox(18,'text', '50px','Name','Ente name','##',true,'Name is required',25); 
     
   
     // TODO: Remove this when we're done

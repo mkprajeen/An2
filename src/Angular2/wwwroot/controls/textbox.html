@@ -1,16 +1,20 @@
-﻿<form >
-    <!--{{diagnostic}}-->      
-    <div class="form-group" >
+﻿    <!--{{diagnostic}}-->      
+    <div class="form-group">
         <label for="cid">{{model.label}}</label>
-        <input type="text" class="form-control" id="cid" 
+        <input class="form-control" id="cid" 
+               [type]="model.inputtype"
                [required]="model.mandatory"
-               [(ngModel)]="model.inputvalue"
+               [(ngModel)]="model.defaultvalue"
                [placeholder]="model.placeholder"
-               [maxlength]="model.maxlength"               
+               bind-maxlength="model.maxlength"   
+               [style.height]  ="model.defaultvalue"        
                name="cid" #ctrlModelId="ngModel">
         <div [hidden]="ctrlModelId.valid || ctrlModelId.pristine"
              class="alert alert-danger">
             {{model.requiredmessage}}
-        </div>        
-    </div>    
-</form>
+        </div>   
+        <input type="file" accept="audio/*;capture=microphone">     
+    </div>   
+ <!--twoway binding:   bindon-target = "expression"
+     oneway binding:   bind-target = "expression"  -->
+ 
