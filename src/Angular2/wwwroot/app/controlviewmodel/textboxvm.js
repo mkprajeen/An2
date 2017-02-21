@@ -1,36 +1,32 @@
 "use strict";
 class control {
-    constructor(cid, inputtype, defaultvalue, label, placeholder, inputmask, mandatory, requiredmessage, maxlength) {
-        this.cid = cid;
-        this.inputtype = inputtype;
-        this.defaultvalue = defaultvalue;
-        this.label = label;
-        this.placeholder = placeholder;
-        this.inputmask = inputmask;
-        this.mandatory = mandatory;
-        this.requiredmessage = requiredmessage;
-        this.maxlength = maxlength;
+    constructor(options = {}) {
+        this.cid = options.cid;
+        //this.inputtype = options.inputtype;
+        this.defaultvalue = options.defaultvalue;
+        this.label = options.label;
+        this.placeholder = options.placeholder;
+        this.inputmask = options.inputmask;
+        this.mandatory = options.mandatory;
+        this.requiredmessage = options.requiredmessage;
+        this.maxlength = options.maxlength;
     }
 }
 exports.control = control;
 class TextBox extends control {
-    constructor(cid, inputtype, defaultvalue, label, placeholder, inputmask, mandatory, requiredmessage, maxlength) {
-        super(cid, inputtype, defaultvalue, label, placeholder, inputmask, mandatory, requiredmessage, maxlength);
+    constructor(options = {}) {
+        super(options);
+        this.inputtype = "text";
     }
 }
 exports.TextBox = TextBox;
-class TextBox1 {
-    constructor(cid, inputtype, defaultvalue, label, placeholder, inputmask, mandatory, requiredmessage, maxlength) {
-        this.cid = cid;
-        this.inputtype = inputtype;
-        this.defaultvalue = defaultvalue;
-        this.label = label;
-        this.placeholder = placeholder;
-        this.inputmask = inputmask;
-        this.mandatory = mandatory;
-        this.requiredmessage = requiredmessage;
-        this.maxlength = maxlength;
+class DropDown extends control {
+    constructor(options = {}) {
+        super(options);
+        this.controlType = 'dropdown';
+        this.options = [];
+        this.options = options['options'] || [];
     }
 }
-exports.TextBox1 = TextBox1;
+exports.DropDown = DropDown;
 //# sourceMappingURL=textboxvm.js.map

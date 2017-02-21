@@ -12,7 +12,8 @@ const core_1 = require('@angular/core');
 const textboxvm_1 = require('./textboxvm');
 let TextBoxComponent = class TextBoxComponent {
     constructor() {
-        this.model = new textboxvm_1.TextBox(18, 'text', '50px', 'Name', 'Ente name', '##', true, 'Name is required', 25);
+        //model = new TextBox(18, 'text', '50px', 'Name', 'Ente name', '##', true, 'Name is required', 25); 
+        this.model = new textboxvm_1.TextBox({ cid: 18, defaultvalue: '50px', label: 'Name', placeholder: 'Ente name', inputmask: '##', mandatory: true, requiredmessage: 'Name is required', maxlength: 25 });
     }
 };
 TextBoxComponent = __decorate([

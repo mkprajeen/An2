@@ -9,56 +9,45 @@ export class control {
     public mandatory: boolean;
     public requiredmessage: string;
     public maxlength: number;
-    constructor(
-        cid: number,
-        inputtype: string,
-        defaultvalue: string,
+    constructor(options: {
+        cid?: number,
+       // inputtype?: string,
+        defaultvalue?: string,
         label?: string,
         placeholder?: string,
         inputmask?: string,
         mandatory?: boolean,
         requiredmessage?: string,
-        maxlength?: number)
+        maxlength?: number
+        } = {})
     {
-        this.cid = cid;
-        this.inputtype = inputtype;
-        this.defaultvalue = defaultvalue;
-        this.label = label;
-        this.placeholder = placeholder;
-        this.inputmask = inputmask;
-        this.mandatory = mandatory;
-        this.requiredmessage = requiredmessage;
-        this.maxlength = maxlength;
+        this.cid = options.cid;
+        //this.inputtype = options.inputtype;
+        this.defaultvalue = options.defaultvalue;
+        this.label = options.label;
+        this.placeholder = options.placeholder;
+        this.inputmask = options.inputmask;
+        this.mandatory = options.mandatory;
+        this.requiredmessage = options.requiredmessage;
+        this.maxlength = options.maxlength;
     }
 }
 
 export class TextBox extends control {
-    constructor(
-         cid: number,
-         inputtype: string,
-         defaultvalue: string,
-         label?: string,
-         placeholder?: string,
-         inputmask?: string,
-         mandatory?: boolean,
-         requiredmessage?: string,
-         maxlength?: number
-    )    
+    inputtype = "text";
+    constructor(options: {} = {})     
     {
-        super(cid, inputtype, defaultvalue, label, placeholder, inputmask, mandatory, requiredmessage, maxlength )
+        super(options);  
     }
 }
 
-export class TextBox1 {
-    constructor(
-        public cid: number, 
-        public inputtype:string,      
-        public defaultvalue: string,
-        public label?: string,
-        public placeholder?: string,
-        public inputmask?: string,
-        public mandatory?:boolean,
-        public requiredmessage?: string,
-        public maxlength?: number
-        ) { }
+export class DropDown extends control {
+    controlType = 'dropdown';
+    options: { key: string, value: string }[] = [];
+
+    constructor(options: {} = {}) {
+        super(options);
+        this.options = options['options'] || [];
+    }
+    
 }
