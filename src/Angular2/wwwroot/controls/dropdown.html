@@ -1,7 +1,7 @@
 ﻿    <!--{{diagnostic}}-->      
     <div class="form-group">
         <label for="cid">{{model.label}}</label>
-        <select>
+        <select  [(ngModel)]="model.options">
             <option *ngFor="let option of options" value={{option.key}}>
                 {{option.Value}}
             </option>
@@ -13,4 +13,11 @@
         <input type="button" value="Button" >     
     </div>   
 
- 
+ <!--<div>
+<label>Colour</label>
+<div>
+    <select [(ngModel)]="car.colour" ">
+        <option *ngFor="let x of colours" [value]="x.id" [selected]="car.color.id == x.id">{{x.name}}</option>
+    </select>
+</div>
+    </div>-->
