@@ -7,13 +7,13 @@
                [(ngModel)]="model.defaultvalue"
                [placeholder]="model.placeholder"
                bind-maxlength="model.maxlength"   
-               [style.height]  ="model.defaultvalue"        
+               [style.height]  ="model.maxlength"        
                name="cid" #ctrlModelId="ngModel">
         <div [hidden]="ctrlModelId.valid || ctrlModelId.pristine"
              class="alert alert-danger">
             {{model.requiredmessage}}
         </div>   
-        <input type="file" accept="audio/*;capture=microphone">     
+        <input type="button" value="Button" >     
     </div>   
  <!--twoway binding:   bindon-target = "expression"
      oneway binding:   bind-target = "expression"  -->

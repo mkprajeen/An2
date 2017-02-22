@@ -20,6 +20,20 @@ class TextBox extends control {
     }
 }
 exports.TextBox = TextBox;
+class PasswordTextBox extends control {
+    constructor(options = {}) {
+        super(options);
+        this.inputtype = "password";
+    }
+}
+exports.PasswordTextBox = PasswordTextBox;
+class Button extends control {
+    constructor(options = {}) {
+        super(options);
+        this.inputtype = "button";
+    }
+}
+exports.Button = Button;
 class DropDown extends control {
     constructor(options = {}) {
         super(options);

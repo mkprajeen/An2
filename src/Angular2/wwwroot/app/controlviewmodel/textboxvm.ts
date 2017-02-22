@@ -40,6 +40,19 @@ export class TextBox extends control {
         super(options);  
     }
 }
+export class PasswordTextBox extends control {
+    inputtype = "password";
+    constructor(options: {} = {}) {
+        super(options);
+    }
+}
+
+export class Button extends control {
+    inputtype = "button";
+    constructor(options: {} = {}) {
+        super(options);
+    }
+}
 
 export class DropDown extends control {
     controlType = 'dropdown';
