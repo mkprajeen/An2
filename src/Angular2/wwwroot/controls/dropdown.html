@@ -1,0 +1,16 @@
+﻿    <!--{{diagnostic}}-->      
+    <div class="form-group">
+        <label for="cid">{{model.label}}</label>
+        <select>
+            <option *ngFor="let option of options" value={{option.key}}>
+                {{option.Value}}
+            </option>
+        </select>
+        <div [hidden]="ctrlModelId.valid || ctrlModelId.pristine"
+             class="alert alert-danger">
+            {{model.requiredmessage}}
+        </div>   
+        <input type="button" value="Button" >     
+    </div>   
+
+ 
