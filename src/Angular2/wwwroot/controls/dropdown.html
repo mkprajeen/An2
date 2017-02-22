@@ -1,23 +1,18 @@
 ﻿    <!--{{diagnostic}}-->      
     <div class="form-group">
         <label for="cid">{{model.label}}</label>
-        <select  [(ngModel)]="model.options">
-            <option *ngFor="let option of options" value={{option.key}}>
-                {{option.Value}}
+        <select class="form-control"  
+                [required]="model.mandatory"
+                [(ngModel)]="model.options"
+                name="cid" #ctrlModelId="ngModel">
+            <option *ngFor="let option of model.options" value={{option.key}}>
+                {{option.value}}
             </option>
         </select>
+        
         <div [hidden]="ctrlModelId.valid || ctrlModelId.pristine"
              class="alert alert-danger">
             {{model.requiredmessage}}
-        </div>   
-        <input type="button" value="Button" >     
+        </div>  
+        
     </div>   
-
- <!--<div>
-<label>Colour</label>
-<div>
-    <select [(ngModel)]="car.colour" ">
-        <option *ngFor="let x of colours" [value]="x.id" [selected]="car.color.id == x.id">{{x.name}}</option>
-    </select>
-</div>
-    </div>-->
