@@ -10,11 +10,12 @@ import {DropDown} from './textboxvm';
 export class DropDownComponent {
 
     model = new DropDown({
-        cid: 18, defaultvalue: '0', label: 'Name',
+        cid: 18, defaultvalue: '3', label: 'Select  Option',
         placeholder: 'Ente name', inputmask: '##', mandatory: true,
-        requiredmessage: 'Name is required', maxlength: 25,
-        options: [{ key: 1, value: 'option1' }, { key: 2, value: 'option2' }, { key: 3, value: 'option3' }]
+        requiredmessage: 'Select an Item', maxlength: 25,
+        options: [{ key: '', value: '' },{ key: '1', value: 'option1' }, { key: '2', value: 'option2' }, { key: '3', value: 'option3' }]
     });
+ 
     
     // TODO: Remove this when we're done
     // get diagnostic() { return JSON.stringify(this.model); }

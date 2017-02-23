@@ -1,18 +1,18 @@
 ﻿    <!--{{diagnostic}}-->      
     <div class="form-group">
-        <label for="cid">{{model.label}}</label>
+        <label for="cid1">{{model.label}}</label>
         <select class="form-control"  
                 [required]="model.mandatory"
-                [(ngModel)]="model.options"
-                name="cid" #ctrlModelId="ngModel">
-            <option *ngFor="let option of model.options" value={{option.key}}>
+                [(ngModel)]="model.defaultvalue"
+                name="cid1" #drpModelId="ngModel">
+            <option *ngFor="let option of model.options" [(value)]="option.key">
                 {{option.value}}
             </option>
         </select>
         
-        <div [hidden]="ctrlModelId.valid || ctrlModelId.pristine"
+        <div [hidden]="drpModelId.valid || drpModelId.pristine"
              class="alert alert-danger">
             {{model.requiredmessage}}
-        </div>  
+        </div>    
         
     </div>   
