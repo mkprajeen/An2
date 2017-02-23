@@ -2,7 +2,6 @@
 class control {
     constructor(options = {}) {
         this.cid = options.cid;
-        //this.inputtype = options.inputtype;
         this.defaultvalue = options.defaultvalue;
         this.label = options.label;
         this.placeholder = options.placeholder;
@@ -27,6 +26,13 @@ class PasswordTextBox extends control {
     }
 }
 exports.PasswordTextBox = PasswordTextBox;
+class CheckBox extends control {
+    constructor(options = {}) {
+        super(options);
+        this.inputtype = "checkbox";
+    }
+}
+exports.CheckBox = CheckBox;
 class Button extends control {
     constructor(options = {}) {
         super(options);

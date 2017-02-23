@@ -16,6 +16,7 @@ const task_component_1 = require('./task.component');
 const hero_form_component_1 = require('./hero-form.component');
 const textbox_component_1 = require('./controlviewmodel/textbox.component');
 const dropdown_component_1 = require('./controlviewmodel/dropdown.component');
+const checkbox_component_1 = require('./controlviewmodel/checkbox.component');
 const logger_service_1 = require('./logger.service');
 const app_config_1 = require('./app.config');
 const app_config_2 = require('./app.config');
@@ -24,7 +25,7 @@ let AppModule = class AppModule {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-        declarations: [app_component_1.AppComponent, task_component_1.TaskComponent, hero_form_component_1.HeroFormComponent, textbox_component_1.TextBoxComponent, dropdown_component_1.DropDownComponent],
+        declarations: [app_component_1.AppComponent, task_component_1.TaskComponent, hero_form_component_1.HeroFormComponent, textbox_component_1.TextBoxComponent, dropdown_component_1.DropDownComponent, checkbox_component_1.CheckBoxComponent],
         providers: [logger_service_1.Logger, { provide: app_config_2.APP_CONFIG, useValue: app_config_1.HERO_DI_CONFIG }],
         bootstrap: [app_component_1.AppComponent]
     }), 

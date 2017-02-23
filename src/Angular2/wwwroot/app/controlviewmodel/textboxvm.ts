@@ -11,7 +11,6 @@ export class control {
     public maxlength: number;
     constructor(options: {
         cid?: number,
-       // inputtype?: string,
         defaultvalue?: string,
         label?: string,
         placeholder?: string,
@@ -19,10 +18,8 @@ export class control {
         mandatory?: boolean,
         requiredmessage?: string,
         maxlength?: number
-        } = {})
-    {
+    } = {}) {
         this.cid = options.cid;
-        //this.inputtype = options.inputtype;
         this.defaultvalue = options.defaultvalue;
         this.label = options.label;
         this.placeholder = options.placeholder;
@@ -35,13 +32,19 @@ export class control {
 
 export class TextBox extends control {
     inputtype = "text";
-    constructor(options: {} = {})     
-    {
-        super(options);  
+    constructor(options: {} = {}) {
+        super(options);
     }
 }
 export class PasswordTextBox extends control {
     inputtype = "password";
+    constructor(options: {} = {}) {
+        super(options);
+    }
+}
+
+export class CheckBox extends control {
+    inputtype = "checkbox";
     constructor(options: {} = {}) {
         super(options);
     }
@@ -62,5 +65,5 @@ export class DropDown extends control {
         super(options);
         this.options = options['options'] || [];
     }
-    
+
 }
