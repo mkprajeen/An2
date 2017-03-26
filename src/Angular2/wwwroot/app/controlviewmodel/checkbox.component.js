@@ -12,7 +12,10 @@ const core_1 = require('@angular/core');
 const textboxvm_1 = require('./textboxvm');
 let CheckBoxComponent = class CheckBoxComponent {
     constructor() {
-        this.model = new textboxvm_1.CheckBox({ cid: 18, defaultvalue: 'true', label: 'Name', mandatory: true, requiredmessage: 'Name is required', maxlength: 25 });
+        this.model = new textboxvm_1.CheckBox({ cid: 18, defaultvalue: true, label: 'Name chk1', mandatory: false, requiredmessage: 'Name is required', maxlength: 25 });
+    }
+    completed() {
+        this.model.defaultvalue = true;
     }
 };
 CheckBoxComponent = __decorate([

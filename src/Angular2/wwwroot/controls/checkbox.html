@@ -1,15 +1,12 @@
 ﻿    <!--{{diagnostic}}-->      
     <div class="form-group">
-        <label for="cid">{{model.label}}</label>
-        <input class="form-control" id="cid" 
-               [type]="model.inputtype"
-               [required]="model.mandatory"
-               [(ngModel)]="model.defaultvalue"  
-               [(value)] ="model.label"           
-               [style.height]  ="model.maxlength"        
+        <label for="cid3" >{{model.label}}</label>
+        <input class="checkbox" id="cid3" 
+               type="checkbox"          
+               [(ngModel)]="model.defaultvalue"                        
                name="cid3" #ctrlcheckId="ngModel">
-        <div [hidden]="ctrlcheckId.valid || ctrlcheckId.pristine"
+        <!--<div [hidden]="ctrlcheckId.valid || ctrlcheckId.pristine"
              class="alert alert-danger">
             {{model.requiredmessage}}
-        </div>
+        </div-->
     </div>

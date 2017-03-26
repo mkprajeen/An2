@@ -9,7 +9,10 @@ import {CheckBox} from './textboxvm';
 })
 export class CheckBoxComponent {
 
-   model = new CheckBox({ cid: 18, defaultvalue: 'true', label: 'Name',  mandatory: true, requiredmessage: 'Name is required', maxlength: 25 });
+    model = new CheckBox({ cid: 18, defaultvalue: true,  label: 'Name chk1',  mandatory: false, requiredmessage: 'Name is required', maxlength: 25});
 
-
+    completed()
+    {
+        this.model.defaultvalue = true;
+    }
 }

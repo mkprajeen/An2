@@ -13,7 +13,7 @@ const textboxvm_1 = require('./textboxvm');
 let TextBoxComponent = class TextBoxComponent {
     constructor() {
         //model = new TextBox(18, 'text', '50px', 'Name', 'Ente name', '##', true, 'Name is required', 25); 
-        this.model = new textboxvm_1.TextBox({ cid: 18, defaultvalue: '50px', label: 'Name', placeholder: 'Ente name', inputmask: '##', mandatory: true, requiredmessage: 'Name is required', maxlength: 25 });
+        this.model = new textboxvm_1.TextBox({ cid: 18, defaultvalue: '50px', label: 'Name', placeholder: 'Ente name', inputmask: '##', mandatory: true, requiredmessage: 'Name is required', maxlength: 200 });
     }
 };
 TextBoxComponent = __decorate([
