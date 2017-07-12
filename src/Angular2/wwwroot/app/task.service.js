@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const hero_1 = require('./hero');
-const logger_service_1 = require('./logger.service');
+Object.defineProperty(exports, "__esModule", { value: true });
+const core_1 = require("@angular/core");
+const hero_1 = require("./hero");
+const logger_service_1 = require("./logger.service");
 let TaskService = class TaskService {
     constructor(logger) {
         this.logger = logger;
@@ -26,8 +27,8 @@ let TaskService = class TaskService {
     }
 };
 TaskService = __decorate([
-    core_1.Injectable(), 
-    __metadata('design:paramtypes', [logger_service_1.Logger])
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [logger_service_1.Logger])
 ], TaskService);
 exports.TaskService = TaskService;
 //# sourceMappingURL=task.service.js.map

@@ -1,5 +1,6 @@
 "use strict";
-const core_1 = require('@angular/core');
+Object.defineProperty(exports, "__esModule", { value: true });
+const core_1 = require("@angular/core");
 exports.HERO_DI_CONFIG = {
     apiEndpoint: 'api.heroes.com',
     title: 'Angular2Sol-> Dependency Injection'

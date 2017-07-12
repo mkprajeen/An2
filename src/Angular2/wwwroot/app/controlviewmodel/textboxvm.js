@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class control {
     constructor(options = {}) {
         this.cid = options.cid;

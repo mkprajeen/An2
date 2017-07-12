@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const core_1 = require('@angular/core');
-const hero_1 = require('./hero');
+Object.defineProperty(exports, "__esModule", { value: true });
+const core_1 = require("@angular/core");
+const hero_1 = require("./hero");
 let AppComponent = class AppComponent {
     constructor() {
         this.id = 30;
@@ -42,8 +43,8 @@ AppComponent = __decorate([
         selector: 'my-app',
         //template: '<h1>My First Angular App by {{name}}</h1> <task>loading...</task>'
         templateUrl: './views/contact.html'
-    }), 
-    __metadata('design:paramtypes', [])
+    }),
+    __metadata("design:paramtypes", [])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

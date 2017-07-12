@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class Hero {
     constructor(id, name, power, alterEgo) {
         this.id = id;
